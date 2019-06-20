@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Mack",
+      "password": "effifo4"
+    },
+    {
+      "username": "alexovo22ww",
+      "password": "wade22wewe",
+      "id": 2
+    },
+    {
+      "username": "duke123",
+      "password": "weer3",
+      "id": 3
+    },
+    {
+      "username": "duke123",
+      "password": "weer3ww",
+      "id": 4
+    },
+    {
+      "username": "alexovo22Base22",
+      "password": "wade22wutydjkl;",
+      "id": 5
+    },
+    {
+      "username": "alexovo22sa",
+      "password": "wade22dfg",
+      "id": 6
+    },
+    {
+      "username": "mj222",
+      "password": "wade22wdwdw",
+      "id": 7
+    },
+    {
+      "username": "mj222",
+      "password": "wade22wdwdw",
+      "id": 8
+    },
+    {
+      "username": "alexovo22",
+      "password": "wade22",
+      "id": 9
+    },
+    {
+      "username": "alexovo22",
+      "password": "wade22",
+      "id": 10
+    },
+    {
+      "username": "alexovo22",
+      "password": "wade22",
+      "id": 11
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the DOM?",
+      "option1": "DoM",
+      "option2": "DooMMM",
+      "correct_answer": "Document Object Model",
+      "id": 1
+    },
+    {
+      "question": "lis are called",
+      "option1": "DoM",
+      "option2": "DooMMM",
+      "correct_answer": "list items",
+      "id": 2
+    },
+    {
+      "question": "H in HTML stands for",
+      "option1": "Hypo",
+      "option2": "Hype",
+      "correct_answer": "Hyper",
+      "id": 3
+    },
+    {
+      "question": "Bits are",
+      "option1": "11134",
+      "option2": "3345",
+      "correct_answer": "1s and 0s",
+      "id": 4
+    },
+    {
+      "question": "class selectors are denoted by",
+      "option1": ">",
+      "option2": "<",
+      "correct_answer": ".",
+      "id": 5
+    }
+  ]
+}

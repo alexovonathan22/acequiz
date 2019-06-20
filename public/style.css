@@ -1,0 +1,326 @@
+/*
+Colours used
+light green - #333
+dark green - #333
+*/
+
+/* General */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+  font: 0.75rem/1.5 Montserrat, Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body#dark {
+  background: #333;
+}
+
+body#light {
+  background: #FFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.text {
+  line-height: 2;
+  text-align: justify;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: linear-gradient(248.28deg, #333 0%, #333 100%);
+  padding: 0 20px;
+  border-bottom: #333 solid 1px;
+}
+
+header #logo {
+  overflow: hidden;
+  display: flex;
+  flex-basis: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+header #logo img {
+  width: 50px;
+  object-fit: contain;
+}
+
+header h1 {
+  flex-grow: 2;
+  color: #FFF;
+  float: left;
+  margin: auto;
+}
+
+header nav {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+header nav a {
+  flex-grow: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.current {
+  color: #F0F4F3;
+  font-weight: 700;
+}
+
+button {
+  border: 1px solid #333;
+  border-radius: 100px;
+  color: white;
+  width: 150px;
+  cursor: pointer;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+button.shaded {
+  border-color: #333;
+  background: #333;
+}
+
+button.transparent {
+  border-color: white;
+  background: transparent;
+}
+
+/*Main body*/
+
+#loginCase {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#main1, #main2 {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#main {
+  display: flex;
+}
+
+#main nav {
+  background: linear-gradient(49.35deg, #333 22.2%, #333 77.8%);
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-basis: 200px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+  align-content: space-evenly;
+}
+
+#main nav a {
+  width: 100%;
+  flex-basis: 50px;
+  border-bottom: #333 solid 1px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-right, .vote-right, .login-right {
+  padding: 20px;
+  flex: 30;
+  text-align: center;
+}
+.main-left{
+  padding: 20px;
+  /* flex: 30; */
+  float: left;
+  align-content: left;
+}
+#questions{
+  /* flex: 30; */
+  float: left;
+  align-content: left;
+  text-align: left;
+}
+
+li{
+  list-style: none;
+}
+
+.side1 {
+  background: linear-gradient(229.85deg, #333 22.96%, #333 77.58%);
+  background-size: cover;
+  color: white;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+}
+
+.side2 {
+  flex: 3;
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  min-width: 400px;
+  max-width: 500px;
+  padding: 10px 0;
+  margin: 10px auto;
+}
+
+input, select, textarea {
+  background: #C0C0C0;
+  border: none;
+  border-radius: 2px;
+  padding: 7px;
+  width: 300px;
+  margin-bottom: 10px;
+  
+}
+
+/* Query Results Display */
+
+div.candidates {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+div.candidates .candidate {
+  margin: 10px;
+  background: #A9A9A9;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(90, 84, 84, 0.6);
+  border-radius: 3px;
+}
+
+div.candidates .candidate:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+div.candidates .candidate div {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+div.candidates .candidate img {
+  width: 300px;
+  object-fit: contain;
+}
+
+div.candidates .candidate a {
+display: block;
+}
+
+.modal, .election {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modal-contents, .election-contents {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: #333 solid 1px;
+  border-radius: 10px;
+  background: #003300;
+}
+
+.modal-contents .close-btn, .election-contents .close-btn {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  font-size: 56px;
+  color: #fff;
+}
+
+.modal-contents h2, .election-contents h2 {
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: #ffffff;
+  background: linear-gradient(248.28deg, #333 0%, #333 100%);
+  text-align: center;
+}
+
+#footerSpace {
+  height: 25px;
+  margin: 0;
+  padding: 5px 50px 5px 10px;
+}
+
+/* Media Queries */
+
+@media(max-width: 900px) {
+  nav {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+  }
+  header h1 {
+    text-align: center;
+  }
+  #loginCase {
+    position: unset;
+    transform: translate(0%, 0%);
+  }
+}
