@@ -77,6 +77,13 @@
       "option2": "Center",
       "correct_answer": "Cascading",
       "id": 17
+    },
+    {
+      "question": "An example of a css selector is ____",
+      "option1": "select button ",
+      "option2": "check button",
+      "correct_answer": "class",
+      "id": 18
     }
   ]
 }

@@ -165,8 +165,8 @@ button.transparent {
 .main-left {
   padding: 20px;
   /* flex: 30; */
-  float: left;
-  align-content: left;
+  flex: 30;
+  text-align: left;
 }
 
 #questions {
@@ -210,15 +210,18 @@ li{
 
 .side1 {
   background: linear-gradient(229.85deg, #333 22.96%, #333 77.58%);
-  background-size: cover;
+  background-size: auto;
   color: white;
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   padding: 10px;
   justify-content: center;
+}
+p{
+  font-size: 1rem;
 }
 
 .side2 {
@@ -242,6 +245,8 @@ form {
   padding: 10px 0;
   margin: 10px auto;
 }
+.alert-success{color:#3e5d00;background-color:#e4f0cc;border-color:#d9eab8}.alert-success hr{border-top-color:#cee4a4}.alert-success .alert-link{color:#1c2a00}
+.alert{position:relative;padding:0.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:0.25rem}
 #submit{
   background: rgb(4, 94, 64);
   border: none;

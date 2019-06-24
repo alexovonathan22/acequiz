@@ -15,6 +15,7 @@ $(document).ready(function(){
         n = 1;
         // alph = 'a';
     let url = 'http://localhost:5000/';
+   
     //GetALL
     $.ajax({
         type: 'GET',
@@ -22,33 +23,45 @@ $(document).ready(function(){
         success: function(data){            
            $.each(data, function(i, q){
             $questions.append(`
-              <br> <li> ${num}.  ${q.question} <i data-id = ${q.id} class="edit fas fa-edit"></i> <i data-id = ${q.id} class="remove fas fa-trash-alt"></i></li><br>
+              <br> <li> ${num}.  ${q.question} <i data-id=${q.id} class="one fas fa-street-view"></i> <i data-id = ${q.id} class="edit fas fa-edit"></i> <i data-id = ${q.id} class="remove fas fa-trash-alt"></i></li><br>
             `)
             num++;
-           })
-        // console.log(data);
-        
+           })       
         }
     });
 
-    //Get One
-    $questions.delegate('.eye', 'click', function(){
+    $('#one').on('keyup', function(e){
+        let id = e.target.value;
+
         $.ajax({
-            type: 'GET',
-            url: url+'quiz/'+ $(this).attr('data-id'),
-            success: function(data){            
-               
-                $test.append(`
-                  <br> <li> id: ${data.id}.  ${data.question}  <i data-id = ${data.id} class="remove fas fa-trash-alt"></i></li><br>
-                  <li>${data.option1}</li>
-                  <li>${data.option2}</li>
-                  <li>${data.correct_answer}</li>
+            url: url+'quiz/'+id,
+            success: function(q){
+                if(q.id === undefined){
+                    $('#oneques').html(`
+                    <h3><strong>Id cannot be undefined</strong></h3>                    
                 `)
-                window.location.href = 'http://localhost:5000/taketest.html';
-            
+                }else if(q.id === ''){
+                    $('#oneques').html(`
+                    <h3><strong>Id cannot be empty</strong></h3>                    
+                `)
+                }else if(typeof q.id !== 'number' ){
+                    $('#oneques').html(`
+                    <h3><strong>Id cannot be alphabets</strong></h3>                    
+                `)
+                }else{
+                    $('#oneques').html(`
+                    <h3><strong>${q.question}</strong></h3>
+                    <p class="option">${q.option1}</p>
+                    <p class="option">${q.option2}</p>
+                    <p class="side1">${q.correct_answer}</p>
+                `)
+                }
             }
-        });
+
+        })
+        
     })
+    
 
     //post
     $addQues.on('click', function(e){
@@ -84,36 +97,37 @@ $(document).ready(function(){
             success: function(){
                 $li.fadeOut(300, function(){
                     $(this).remove();
+                    window.location.href = 'http://localhost:5000/allques.html';
                 });
             }
         })
     })
 
     //put req
-    $questions.on('click', function(e){
-        // window.location.href = 'http://localhost:5000/allques.html';
-        e.preventDefault();
-        let question = {
-            question: $ques.val(),
-            option1: $option1.val(),
-            option2: $option2.val(),
-            correct_answer: $correctAns.val()
-        }
+    // $questions.on('click', function(e){
+    //     // window.location.href = 'http://localhost:5000/allques.html';
+    //     e.preventDefault();
+    //     let question = {
+    //         question: $ques.val(),
+    //         option1: $option1.val(),
+    //         option2: $option2.val(),
+    //         correct_answer: $correctAns.val()
+    //     }
 
         
-        $.ajax({
-            type: 'PUT',
-            url: `${url}quiz/${id}`,
-            data: question,
-            success: function(newQues){
+    //     $.ajax({
+    //         type: 'PUT',
+    //         url: `${url}quiz/${id}`,
+    //         data: question,
+    //         success: function(newQues){
                 
-                 window.location.href = 'http://localhost:5000/allques.html';
-            },
-            error: function(){
-                alert('error editing question')
-            }
-        });
-    })  
+    //              window.location.href = 'http://localhost:5000/allques.html';
+    //         },
+    //         error: function(){
+    //             alert('error editing question')
+    //         }
+    //     });
+    // })  
 
 
     //answering the test
@@ -173,11 +187,11 @@ $(document).ready(function(){
         }
         let result = processResults(userVal, correctVal);
         if(result >= 7){
-            $('#showresult').html(`<br> <h3 class="option">Great job! Your Score: ${result}</h3>
+            $('.alert').html(`<br> <h3 class="option">Great job! Your Score: ${result}</h3>
             <h3>   <a href="taketest.html">Take Quiz</a> <i class="fas fa-redo-alt"></i></h3>
         `);
         }else{
-            $('#showresult').html(`<h3 class="option"> Keep Working at it! Your Score: ${result}</h3>
+            $('.alert').html(`<h3 class="option"> Keep Working at it! Your Score: ${result}</h3>
             <h3> <a href="taketest.html">Take Quiz</a> <i class="fas fa-redo-alt"></i></h3>
         `);
         }
