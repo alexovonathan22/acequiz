@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="icons8-checkmark-64.png">
+  <link rel="shortcut icon" type="image/x-icon" href="SBI-logo.svg.png">
   
 </head>
 
 <body id="light">
         <header>
-            <div id="logo"><img src="icons8-checkmark-64.png"></div>
+          <div id="logo"><a href="index.html"><img src="SBI-logo.svg.png"></a></div>
             <h1>AceQuiz</h1>
         </header>
         <section id="main">
@@ -22,12 +22,12 @@
                     <a href="create.html" class="current">Create Questions</a>
                     <a href="viewone.html">View Questions</a>
                     <a href="edit.html">Edit Questions</a>
-                    <a href="#">Delete Questions</a>
+                    <a href="allques.html">Delete Questions</a>
 
                     <!-- <a href="index.html">Log Out</a> -->
                 </nav>
                 <div class="main-right">
-                  <h2>Create Them Questions</h2>
+                  <h2 id="creatQ">Create Questions</h2>
                   <p>Fill in the details below to include a new Question:</p>
                   <form action="http://localhost:5000/quiz" id="questionform" method="POST">
                     <input type="text" id="ques" placeholder="Question" required>

@@ -18,7 +18,7 @@
     {
       "question": "Which computer hardware device provides an interface for all other connected devices to communicate?",
       "option1": "Random Access Memory",
-      "option2": "Central Processing Unit",
+      "option2": "Solid State Drive",
       "correct_answer": "Motherboard",
       "id": 9
     },
@@ -84,6 +84,13 @@
       "option2": "check button",
       "correct_answer": "class",
       "id": 18
+    },
+    {
+      "question": "Computers understand ____",
+      "option1": "Denary",
+      "option2": "Octal",
+      "correct_answer": "Binary",
+      "id": 19
     }
   ]
 }

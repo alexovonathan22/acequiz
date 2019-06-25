@@ -1,10 +1,3 @@
-/*
-Colours used
-light green - #333
-dark green - #333
-*/
-
-/* General */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
@@ -17,6 +10,7 @@ body#dark {
   background: #333;
 }
 
+
 body#light {
   background: #e5e5e5;
 }
@@ -25,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-h2 {
+#creatQ {
   text-align: center;
 }
 
@@ -50,10 +44,10 @@ header {
   padding: 0 20px;
   border-bottom: #333 solid 1px;
 }
-.active{
+/* .active{
   background-color: #00796B;
   color: white;
-}
+} */
 
 header #logo {
   overflow: hidden;
@@ -66,6 +60,11 @@ header #logo {
 header #logo img {
   width: 50px;
   object-fit: contain;
+  
+}
+#imgsize{
+  width: 2%;
+  height: 2%;
 }
 
 header h1 {
@@ -112,6 +111,7 @@ button.shaded {
 button.transparent {
   border-color: white;
   background: transparent;
+  text-emphasis-color: black;
 }
 
 /*Main body*/
@@ -140,7 +140,7 @@ button.transparent {
   margin: 0;
   flex: 1;
   display: flex;
-  flex-basis: 200px;
+  flex-basis: 150px;
   flex-direction: column;
   flex-wrap: wrap;
   height: 300vh;
@@ -157,7 +157,7 @@ button.transparent {
   align-items: center;
 }
 
-.main-right, .vote-right, .login-right {
+.main-right {
   padding: 20px;
   flex: 30;
   text-align: center;
@@ -184,6 +184,14 @@ a{
 }
 ul{
   padding: 0;
+}
+.quesOpt{
+  background: #333;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: whitesmoke; 
+  border-radius: 40px;
+  width: auto;
 }
 input.option{
   
@@ -261,10 +269,10 @@ form {
   padding: 10px 0;
   margin: 10px auto;
 }
-.alert-success{color:#3e5d00;background-color:#e4f0cc;border-color:#d9eab8}.alert-success hr{border-top-color:#cee4a4}.alert-success .alert-link{color:#1c2a00}
-.alert{position:relative;padding:0.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:0.25rem}
+/* .alert-success{color:#3e5d00;background-color:#e4f0cc;border-color:#d9eab8}.alert-success hr{border-top-color:#cee4a4}.alert-success .alert-link{color:#1c2a00}
+.alert{position:relative;padding:0.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:0.25rem} */
 #submit{
-  background: rgb(4, 94, 64);
+  background: #007bff;
   border: none;
   border-radius: 5px;
   padding: 7px;
@@ -272,85 +280,14 @@ form {
   margin-bottom: 10px;
   color: whitesmoke;
 }
-input, select, textarea {
+input{
   background: #C0C0C0;
   border: none;
-  border-radius: 2px;
+  border-radius: 1px;
   padding: 7px;
-  width: 300px;
+  width: 200px;
   margin-bottom: 10px;
   
-}
-
-/* Query Results Display */
-
-div.candidates {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: space-evenly;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-div.candidates .candidate {
-  margin: 10px;
-  background: #A9A9A9;
-  padding: 5px;
-  box-shadow: 0 4px 8px 0 rgba(90, 84, 84, 0.6);
-  border-radius: 3px;
-}
-
-div.candidates .candidate:hover {
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
-}
-
-div.candidates .candidate div {
-  width: 300px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-}
-
-div.candidates .candidate img {
-  width: 300px;
-  object-fit: contain;
-}
-
-div.candidates .candidate a {
-display: block;
-}
-
-.modal, .election {
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.modal-contents, .election-contents {
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: #333 solid 1px;
-  border-radius: 10px;
-  background: #003300;
-}
-
-.modal-contents .close-btn, .election-contents .close-btn {
-  position: absolute;
-  top: 0;
-  right: 5%;
-  font-size: 56px;
-  color: #fff;
-}
-
-.modal-contents h2, .election-contents h2 {
-  color: #fff;
 }
 
 /* Footer */
