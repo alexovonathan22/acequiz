@@ -162,6 +162,12 @@ button.transparent {
   flex: 30;
   text-align: center;
 }
+h2{
+  text-align: left;
+}
+a{
+  color: black;
+}
 .main-left {
   padding: 20px;
   /* flex: 30; */
@@ -223,16 +229,26 @@ li{
 p{
   font-size: 1rem;
 }
+ul li .edit{
+  display: none;
+}
+ul li.edit .edit{
+  display: initial;
+}
+ul li.edit .noedit{
+  display: none;
+}
+
 
 .side2 {
   flex: 3;
-  background: white;
+  background: rgb(214, 209, 209);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   padding: 10px;
 }
 
