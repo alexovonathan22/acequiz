@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AceQuiz | Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="SBI-logo.svg.png">
+  
+</head>
+
+<body id="light">
+        <header>
+          <div id="logo"><a href="index.html"><img src="SBI-logo.svg.png"></a></div>
+            <h1>AceQuiz</h1>
+        </header>
+        <section id="main">
+                <nav>
+                    <a href="create.html" class="current">Create Questions</a>
+                    <a href="viewone.html">View Questions</a>
+                    <a href="edit.html">Edit Questions</a>
+                    <a href="allques.html">Delete Questions</a>
+
+                    <!-- <a href="index.html">Log Out</a> -->
+                </nav>
+                <div class="main-right">
+                  <h2 id="creatQ">Create Questions</h2>
+                  <p>Fill in the details below to include a new Question:</p>
+                  <form action="http://localhost:5000/quiz" id="questionform" method="POST">
+                    <input type="text" id="ques" placeholder="Question" required>
+                    <input type="text" id="option1" placeholder="options1..." required>
+                    <input type="text" id="option2" placeholder="options2..." required>
+                    <input type="text" id="correctAns" placeholder="correctAns..." required>
+                    <button class="shaded" id="addQues">Create</button>
+                  </form>
+                </div>
+              </section>
+            
+       
+      
+        
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="aceMain.js"></script>
+</body>

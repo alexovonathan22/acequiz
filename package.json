@@ -1,0 +1,27 @@
+{
+  "name": "acequiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "aceMain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexovonathan22/acequiz.git"
+  },
+  "keywords": [
+    "html",
+    "quiz"
+  ],
+  "author": "Alex-Ovo Nathan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexovonathan22/acequiz/issues"
+  },
+  "homepage": "https://github.com/alexovonathan22/acequiz#readme",
+  "dependencies": {
+    "json-server": "^0.15.0",
+    "mustache": "^3.0.1"
+  }
+}
